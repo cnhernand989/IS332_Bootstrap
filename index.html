@@ -106,16 +106,6 @@
     </div>
 	<script>
 	$(document).ready(function() {  
-    	$('#myCarousel').hammer().on('swipeleft', function(){
-  			$(this).carousel('next'); 
-  		})
-  		$('#myCarousel').hammer().on('swiperight', function(){
-  			$(this).carousel('prev'); 
-  		})
-	});> 
-	</script>
-	<script>
-	$(document).ready(function() {  
   		 $("#myCarousel").swiperight(function() {  
     		  $(this).carousel('prev');  
 	    		});  
@@ -123,7 +113,18 @@
 		      $(this).carousel('next');  
 	   });  
 	});  
-	</script><!-- /.carousel -->	
+	</script>
+	<script>
+	$(document).ready(function() {  
+    	$('#myCarousel').hammer().on('swipeleft', function(){
+  			$(this).carousel('next'); 
+  		})
+  		$('#myCarousel').hammer().on('swiperight', function(){
+  			$(this).carousel('prev'); 
+  		})
+	}); 
+	</script>
+	<!-- /.carousel -->	
 	
 <!-- Marketing messaging and featurettes
     ================================================== -->
