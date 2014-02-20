@@ -112,7 +112,17 @@
   		$('#myCarousel').hammer().on('swiperight', function(){
   			$(this).carousel('prev'); 
   		})
-	}); 
+	});> 
+	</script>
+	<script>
+	$(document).ready(function() {  
+  		 $("#myCarousel").swiperight(function() {  
+    		  $(this).carousel('prev');  
+	    		});  
+		   $("#myCarousel").swipeleft(function() {  
+		      $(this).carousel('next');  
+	   });  
+	});  
 	</script><!-- /.carousel -->	
 	
 <!-- Marketing messaging and featurettes
