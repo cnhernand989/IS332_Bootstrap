@@ -104,26 +104,25 @@
       <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
-	<!--<script>
-	$(document).ready(function() {  
-  		 $("#myCarousel").swiperight(function() {  
-    		  $(this).carousel('prev');  
-	    		});  
-		   $("#myCarousel").swipeleft(function() {  
-		      $(this).carousel('next');  
-	   });  
-	});  
-	</script>
 	<script>
 	$(document).ready(function() {  
-    	$('#myCarousel').hammer().on('swipeleft', function(){
-  			$(this).carousel('next'); 
-  		})
-  		$('#myCarousel').hammer().on('swiperight', function(){
-  			$(this).carousel('prev'); 
-  		})
-	}); 
-	</script>-->
+ 
+					//Enable swiping...
+					$(".carousel-inner").swipe( {
+						//Generic swipe handler for all directions
+						swipeLeft:function(event, direction, distance, duration, fingerCount) {
+							$(this).parent().carousel('prev'); 
+						},
+						swipeRight: function() {
+							$(this).parent().carousel('next'); 
+						},
+						//Default is 75px, set to 0 for demo so any distance triggers swipe
+						threshold:0
+					});
+				});
+	</script>
+	
+	
 	<!-- /.carousel -->	
 	
 <!-- Marketing messaging and featurettes
@@ -209,7 +208,7 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-        <!--<script src="js/plugins.js"></script>-->
+        <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 		<script src="hammer.js"></script>
 
